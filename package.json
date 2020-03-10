@@ -1,0 +1,69 @@
+{
+  "name": "lifestyle-assessment-tool",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/react-transition-group": "^4.2.4",
+    "@types/styled-components": "^4.4.3",
+    "gsap": "^2.1.3",
+    "node": "^12.16.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-ga": "^2.7.0",
+    "react-player": "^1.15.2",
+    "react-render-html": "^0.6.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "react-scripts-ts": "^3.1.0",
+    "react-slick": "^0.25.2",
+    "rewire": "^4.0.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^4.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  },
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.4",
+    "react-app-polyfill": "^1.0.6",
+    "react-transition-group": "^4.3.0",
+    "typescript": "^3.8.2"
+  }
+}
