@@ -1,0 +1,33 @@
+.dotToggle {
+  position: relative;
+  background-color: #D6D9D8;
+  width: 41px;
+  height: 25px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    content: '';
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: left .1s ease;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,.3);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.toggled {
+    background-color: #1e9be9;
+
+    &:after {
+      left: 18px;
+    }
+  }
+}

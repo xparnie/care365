@@ -1,0 +1,9 @@
+.hList {
+  display: flex;
+  align-items: center;
+}
+
+.hList-split > * {
+  width: 50%;
+  text-align: center;
+}

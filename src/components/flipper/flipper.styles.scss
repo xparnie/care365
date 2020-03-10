@@ -1,0 +1,27 @@
+/***
+** FLIPPER OBJECT - ANIMATES CHILD ELEMENTS
+***/
+
+.flipper {
+  perspective: 300px;
+}
+
+.flipper-sides {
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  &.isActive {
+    transform: rotateY(180deg) translateZ(5px);
+  }
+}
+
+.flipper-sides-front {
+  transform: rotateY(0deg) translateZ(5px);
+}
+
+.flipper-sides-back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg) translateZ(5px);
+}

@@ -1,0 +1,71 @@
+.mobileApps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  width: 80%;
+  margin: auto;
+}
+
+.mobileApps-features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2vmin;
+  max-width: 800px;
+}
+
+.mobileApps-features > * {
+  flex-grow: 1;
+  width: 46%;
+  padding-left: 4%;
+  margin-bottom: 25px;
+}
+
+.mobileAppsFooter-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileAppsFooter-list > * + * {
+  margin-left: 2vmin;
+}
+
+.mobileApps-copy {
+  text-align: left;
+}
+
+.mobileApps-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileApps-product-img {
+  position: relative;
+  z-index: 1;
+}
+
+.mobileApps-product-img > * {
+  margin: auto;
+  max-width: 255px;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.media-img {
+  margin-right: 10px;
+  min-width: 40px;
+}
+
+.media-bd > * {
+  font-size: 20px;
+}

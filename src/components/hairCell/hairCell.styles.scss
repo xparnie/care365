@@ -1,0 +1,23 @@
+#imageRange-head {
+  width: 350px;
+}
+.player-wrapper {
+  width: 700px;
+
+  video {
+    display: block;
+  }
+}
+
+.range-wrap {
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  margin-top: -50px;
+  z-index: 50;
+}
+
+.range-labels {
+  font-size: 1.9rem;
+  font-weight: bold;
+}

@@ -1,0 +1,21 @@
+.checkmark {
+  position: relative;
+  height: 3.6vmin;
+  width: 3.6vmin;
+  color: #1e9be9;
+  border: 2.5px solid #1e9be9;
+  border-radius: 50%;
+}
+
+.checkmark > svg {
+  width: 3.8vmin;
+  height: 3.8vmin;
+  position: absolute;
+  top: 30%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark > svg > g > path:last-child {
+  fill: #ffffff;
+}

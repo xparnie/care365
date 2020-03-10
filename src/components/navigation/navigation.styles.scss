@@ -1,0 +1,228 @@
+.navigation-wrap {
+  height: 100vh;
+  background-color: transparent;
+  left: -500px;
+  position: fixed;
+  transition: left 0.3s ease-in-out;
+  z-index: 175;
+  &.expanded {
+    left: 0;
+    .navigation-link {
+      color: #fff;
+    }
+  }
+}
+.nav-background {
+  height: 200px;
+  width: 200px;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  position: fixed;
+  transition: all ease-in-out 0.3s;
+  z-index: 150;
+  background-color: rgba(89, 91, 96, 0.86);
+  &.expanded {
+    height: 120%;
+    width: 94vw;
+    top: -10%;
+    border-radius: 50% 50% 50% 50%;
+    left: -44%;
+    @media (min-width: 1024px) {
+      left: -50%;
+    }
+    @media (min-width: 1200px) {
+      width: 1000px;
+      left: -500px;
+    }
+  }
+}
+
+.navigationSection {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-left: 4rem;
+  @media (min-width: 890px) {
+    padding-left: 7rem;
+  }
+}
+
+.navigation > * + * {
+  margin-top: 10px;
+}
+
+.navigation-link {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  font-family: 'DIN Next';
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 100;
+  @media (min-width: 1200px) {
+    font-size: 2.1rem;
+    line-height: 2.3rem;
+  }
+}
+
+.navigation-link.isActive::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.navigation-link:active {
+  color: rgba(56, 84, 36, 0.8);
+}
+
+.navigation-subLink-link {
+  color: #ffffff;
+  font-family: 'DIN Next';
+  font-size: 1.8rem;
+}
+
+.navigation-subList > * {
+  margin-top: 10px;
+}
+
+.navigation-subList {
+  //  margin-left: 40px;
+}
+
+.navigationSection:first-child {
+  //padding-top: 6rem;
+}
+
+// The following is used to create the animate hamburger Button
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+  top: -100px;
+  left: -100px;
+  height: 60px;
+  width: 60px;
+  padding: 15px;
+  display: block;
+  border-width: 0;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  margin: 0;
+  overflow: visible;
+  position: fixed;
+  z-index: 200;
+  &:focus {
+    outline: 0;
+  }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+} // .hamburger
+
+.hamburger-box {
+  width: 26px;
+  height: 14px;
+  display: inline-block;
+  position: absolute;
+  left: 120px;
+  top: 125px;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  &,
+  &::before,
+  &::after {
+    width: 26px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+  }
+
+  &::before {
+    top: -8px;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  }
+
+  &::after {
+    bottom: -8px;
+    transition: bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+} // .hamburger-inner
+
+.hamburger.expanded {
+  .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &,
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out,
+        transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+} // .hamburger[aria-expanded="true"]
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .hamburger-box {
+    left: 120px;
+  }
+}
+
+.btn-outline {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 5px;
+}

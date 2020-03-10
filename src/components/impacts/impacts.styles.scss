@@ -1,0 +1,298 @@
+/** 
+Impact Page Heading
+  centering of text and offset to center within circle
+**/
+.circleText {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circleText-text {
+  font-size: 8vmin;
+  color: #1e9be9;
+}
+// End circleText
+
+/** 
+Impact Circle 
+  Dashed cirlce in which children are absolutly position around
+**/
+
+.impactCircle {
+  position: relative;
+  top: 2vmin;
+  width: 75vmin;
+  height: 75vmin;
+  border: 1px dashed #aaaaaa;
+  border-radius: 50%;
+}
+
+.impactCircle > * {
+  position: absolute;
+}
+
+.impactCircle > *:nth-child(1) {
+  top: -9vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.impactCircle > *:nth-child(2) {
+  top: 20%;
+  right: -8%;
+  transform: translate(0%, -20%);
+}
+
+.impactCircle > *:nth-child(3) {
+  bottom: 0;
+  right: 3vw;
+  transform: translate(0%, 0%);
+}
+
+.impactCircle > *:nth-child(4) {
+  bottom: 0;
+  left: 3vw;
+  transform: translate(0%, 0%);
+}
+
+.impactCircle > *:nth-child(5) {
+  top: 20%;
+  left: -8%;
+  transform: translate(0%, -20%);
+}
+
+// End impactCircle
+
+/** 
+Impact Item 
+  Each individual impact
+  Modal div is hidden and toggles onClick with isActive class
+**/
+
+.impact-wrap {
+  width: 20vmin;
+  height: 20vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition-delay: 0.01s;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.impact:not(.isActive) > .impact-wrap.isActive,
+.impact.isActive > .impact-wrap:not(.isActive),
+.impact.isActive > .impact-wrap.isActive {
+  animation: impactPulse 2s infinite ease-in-out;
+  background-color: rgba(30, 155, 233, 1);
+
+  .impact-bd > * {
+    color: #ffffff;
+  }
+
+  path {
+    fill: #bddef5;
+  }
+}
+
+@keyframes impactPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 155, 233, 0.3);
+  }
+  40% {
+    box-shadow: 0 0 0 30px rgba(208, 214, 216, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 171, 228, 0);
+  }
+}
+
+.impact-hd {
+  margin-bottom: 10px;
+}
+
+.impact-hd > * {
+  max-width: 6vmin;
+  max-height: 6vmin;
+}
+
+.impact-bd > * {
+  color: #000000;
+  font-size: 2vmin;
+  font-family: 'DIN Next';
+  font-weight: bold;
+}
+
+/***
+** IMPACT INITIAL STATE - 
+  TILE SHOWN / MODAL HIDDEN
+***/
+
+.closeModal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  padding: 5vmin;
+  color: #1e9be9;
+  font-size: 3.5vmin;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #ebf5fb;
+}
+
+.closeModal-flip {
+  background-color: #ffffff;
+}
+
+/***
+** IMPACT MODAL STYLES
+***/
+.impactModal-hd > * + * {
+  margin-top: 10px;
+}
+
+.impactModal-hd-subTitle {
+  font-size: 3vmin;
+  color: #aaaaaa;
+}
+
+.impactModal-hd-title {
+  font-size: 7vmin;
+  color: #1e9be9;
+}
+
+.impact-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.impact-modal-wrap {
+  opacity: 0;
+}
+
+.impact-modal {
+  animation: modal 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal {
+  0% {
+    height: 1vmin;
+    width: 1vmin;
+  }
+  100% {
+    width: 115vmin;
+    height: 115vmin;
+    padding: 17vmin;
+  }
+}
+
+.impact-modal-wrap {
+  animation: modalWrap 0.75s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modalWrap {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+/***
+** IMPACT SLIDE STYLES
+***/
+
+.impactSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45vmin;
+  margin-top: 2.5vmin;
+}
+
+.impactSlide > *:first-child {
+  margin-bottom: 15px;
+}
+
+.impactSlide-hd-text {
+  font-size: 3vmin;
+  color: #000000;
+}
+
+.impactSlide-hd-text-bold {
+  font-weight: bold;
+}
+
+.impactSlide-copy {
+  position: absolute;
+  bottom: -15vmin;
+  left: 50%;
+  width: 450px;
+  margin-left: -225px;
+}
+
+.impactSlide-copy > * {
+  font-size: 1.5vmin;
+  color: #000000;
+  display: block;
+}
+
+.impactSlide-copy-text > a {
+  color: #000000;
+}
+
+.impactSlide-copy-text-bold {
+  font-weight: bold;
+}
+
+.impactSlide-img > * {
+  margin: auto;
+}
+
+.impactSlide-img-iconSet {
+  max-width: 100%;
+}
+
+.impactSlide-img-graph {
+  max-width: 65%;
+}
+
+.impactSlide-img-icon {
+  max-width: 50%;
+}
+
+/***
+** IPAD ONLY STYLES FOR IMPACTS
+***/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .circleText {
+    top: 50%;
+  }
+
+  .impactModal-hd {
+    margin: 0 0 25px;
+  }
+
+  .impactSlide {
+    height: 50vh;
+  }
+}

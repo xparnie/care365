@@ -1,0 +1,46 @@
+.header {
+  padding: 20px 50px;
+  background-color: #ffffff;
+}
+
+.intro {
+  position: absolute;
+  top: 15vh;
+  width: 100vw;
+  height: 85vh;
+  background: url('../../images/intro.jpg') no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.intro-heading {
+  position: absolute;
+  top: 3vmin;
+  left: 10vmin;
+  width: 50vmin;
+  z-index: 1;
+}
+
+.intro-heading-text {
+  font-size: 15vmin;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.intro-circle {
+  position: absolute;
+  bottom: -30vmin;
+  right: -20vmin;
+  z-index: 9;
+  padding: 15vmin 25vmin 37vmin 15vmin;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.intro-circle-text {
+  color: #00a3e0;
+  font-weight: 100;
+  font-size: 6vmin;
+  line-height: 1;
+}

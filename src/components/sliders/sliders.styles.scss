@@ -1,0 +1,23 @@
+.accessories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 330px;
+}
+
+.accessories-img {
+  margin: 0 auto;
+}
+
+.slide1 {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 20px;
+  margin-right: -50px;
+}
+
+.summary-apps-slider .slick-dots {
+  bottom: -15px;
+}

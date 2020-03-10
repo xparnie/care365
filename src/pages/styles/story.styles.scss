@@ -1,0 +1,35 @@
+.scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vmin;
+  height: 25vmin;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  background-color: #595b60;
+  cursor: pointer;
+
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  svg {
+    fill: #ffffff;
+    stroke: #ffffff;
+    height: 12vmin;
+    width: 12vmin;
+    max-width: 125px;
+    max-height: 125px;
+  }
+}
+
+.scale.isActive {
+  background-color: #1ca3eb;
+  transform: rotateY(180deg) translateZ(5px);
+
+  svg {
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+}

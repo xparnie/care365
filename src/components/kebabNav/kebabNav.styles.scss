@@ -1,0 +1,48 @@
+.kebabNav {
+  bottom: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.kebabNav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  &:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #d6d9d8;
+  }
+}
+
+.kebabNav-item_active {
+  &:after {
+    background-color: #595b60;
+  }
+}
+
+.kebabNav-item_pinned {
+  &:after {
+    animation: kebabNavPulse 2s infinite ease-in-out;
+    background-color: #1e9be9;
+  }
+}
+
+@keyframes kebabNavPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(27, 159, 211, 0.3);
+  }
+  40% {
+    box-shadow: 0 0 0 8px rgba(208, 214, 216, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 171, 228, 0);
+  }
+}

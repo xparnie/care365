@@ -1,0 +1,147 @@
+.techLevels {
+  font-size: 1.85vmin;
+
+  td,
+  th {
+    padding: 0.75vmin 1vmin 0.75vmin;
+  }
+
+  thead th {
+    padding: 0;
+  }
+
+  thead th > * {
+    display: block;
+    font-size: 2.5vmin;
+    margin: 0 1.5px;
+    padding: 0.75vmin 2.5vmin;
+    background-color: #1e9be9;
+    color: #ffffff;
+  }
+
+  thead th:nth-of-type(2) > * {
+    background-color: #7c8180;
+  }
+
+  thead th:nth-of-type(3) > * {
+    background-color: #d0d0d0;
+  }
+
+  tbody tr:first-child > th:first-child {
+    padding-right: 4vmin;
+  }
+
+  tbody th {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 18px;
+  }
+
+  tbody + tbody {
+    border-top: 1px dotted #d6d9d8;
+  }
+
+  .techLevels-section {
+    padding-right: 4vmin;
+    font-size: 2.5vmin;
+    color: #1e9be9;
+    vertical-align: top;
+    font-weight: bold;
+  }
+
+  .techLevels-feature {
+    font-weight: bold;
+  }
+
+  .techLevels-indicator {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    margin: 4px auto 0;
+  }
+
+  .techLevels-indicator_fill {
+    background-color: #1e9be9;
+  }
+
+  .techLevels-indicator_1of2:before,
+  .techLevels-indicator_1of2:after,
+  .techLevels-indicator_3of4:before,
+  .techLevels-indicator_3of4:after {
+    display: block;
+    content: '';
+    position: absolute;
+  }
+
+  .techLevels-indicator_1of2:before,
+  .techLevels-indicator_3of4:before {
+    height: 11px;
+    width: 11px;
+    left: -2px;
+    top: -2px;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  .techLevels-indicator_1of2:after,
+  .techLevels-indicator_3of4:after {
+    background-color: #ffffff;
+    height: 16px;
+    top: -4px;
+    left: -4px;
+  }
+
+  .techLevels-indicator_1of2:after {
+    width: 7px;
+  }
+
+  .techLevels-indicator_3of4:after {
+    width: 9px;
+  }
+
+  .techLevels-feature-trigger {
+    cursor: pointer;
+  }
+}
+
+.techLevels.techLevels_padded tbody td,
+.techLevels.techLevels_padded tbody th {
+  padding: 1.5vmin 1vmin 1.35vmin;
+}
+
+.techLevels.techLevels_padded tbody th.techLevels-feature {
+  padding: 0;
+
+  > * {
+    padding: 1.5vmin 1vmin 1.35vmin;
+    font-weight: normal;
+    font-size: 2.35vmin;
+  }
+
+  > * > .isActive {
+    font-weight: bold;
+  }
+}
+
+.techLevels_active {
+  .techLevels-feature-trigger:after {
+    content: ' *';
+    color: #1e9be9;
+  }
+}
+
+.techLevels-feature-trigger.isActive {
+  color: #1e9be9;
+}
+
+.techLevels.techLevels_padded
+  tbody
+  .techLevels_active
+  th.techLevels-feature
+  > * {
+  font-weight: bold;
+}

@@ -1,0 +1,205 @@
+.audiogram {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  padding: 17px 0;
+
+  .kebabNav {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .pill {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.audiogram-switcher {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 537px;
+  margin-bottom: 15px;
+}
+
+.audiogram-content {
+  width: 749px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.audiogram-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &.hide {
+    display: none;
+  }
+
+  img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+    &:nth-of-type(2) {
+      z-index: 2;
+    }
+
+    &:nth-of-type(3) {
+      z-index: 3;
+    }
+
+    &:nth-of-type(4) {
+      z-index: 4;
+    }
+
+    &.opaque {
+      opacity: 1;
+    }
+  }
+}
+
+.audiogram-toggles {
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+}
+
+.audiogram-toggle {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  margin-bottom: 11px;
+  font-family: 'DIN Next';
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .dotToggle {
+    margin-right: 11px;
+  }
+}
+
+.audiogram-view_audiogram {
+  display: flex;
+  justify-content: center;
+}
+
+.audiogram-view_simulation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.audiogram-control {
+  display: block;
+  width: 100px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  cursor: pointer;
+}
+
+.audiogram-control_prev {
+  background-image: url('/images/audiogram/prev-control.svg');
+}
+
+.audiogram-control_next {
+  background-image: url('/images/audiogram/next-control.svg');
+}
+
+.audiogram-control_disabled {
+  background-image: none;
+}
+
+.audiogramTextToggler {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'DIN Next';
+  border: 2px solid #d6d9d8;
+}
+
+.att-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 72px;
+
+  p {
+    font-size: 20px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  span {
+    color: transparent;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.att-container_normal {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.att-container_loss {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+
+  &.opaque {
+    opacity: 1;
+  }
+}
+
+.att-toggles {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 33px;
+  background-color: #d6d9d8;
+  display: flex;
+  cursor: pointer;
+
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+
+.att-toggles_active {
+  background-color: #1e9be9;
+  color: #fff;
+}

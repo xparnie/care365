@@ -1,0 +1,91 @@
+.start {
+  width: 386px;
+}
+
+.start-header {
+  margin-bottom: 80px;
+}
+
+.start-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-top: 1px solid #d6d9d8;
+  border-bottom: 1px solid #d6d9d8;
+  padding: 40px 15px 5px;
+  margin-bottom: 15px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  .form-group-centered {
+    align-items: center;
+  }
+
+  label {
+    display: block;
+    font-family: 'DIN Next';
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    font-weight: 600;
+  }
+
+  input {
+    &:active {
+      outline: 0;
+      border: 0;
+    }
+
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+
+    &[type='text'] {
+      display: block;
+      border: none;
+      background-color: #f3f4f4;
+      font-size: 16px;
+      padding: 14px 16px;
+      border-radius: 48px;
+      font-family: 'DIN Next';
+    }
+  }
+}
+
+.start-button {
+  display: inline-block;
+  background-color: #1e9be9;
+  padding: 13px 0;
+  border-radius: 25px;
+  color: #ffffff;
+  font-family: 'DIN Next';
+  font-size: 18px;
+  font-weight: bold;
+  width: 180px;
+  outline: 0;
+  border: 0;
+
+  &:disabled {
+    background-color: #ddd;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.start-disclaimer {
+  text-align: left;
+  font-family: 'DIN Next';
+  font-size: 13px;
+  color: #7c8180;
+
+  > * {
+    margin-top: 15px;
+  }
+}

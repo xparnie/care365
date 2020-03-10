@@ -1,0 +1,8 @@
+.vList-item {
+  display: flex;
+  align-items: center;
+}
+
+.vList-item + .vList-item {
+  margin-top: 15px;
+}

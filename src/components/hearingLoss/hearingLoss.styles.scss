@@ -1,0 +1,103 @@
+.hearingLoss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearingLoss-panel {
+  height: 155px;
+  width: 165px;
+
+  > .panel {
+    min-height: 155px;
+  }
+}
+
+.hearingLoss-panel > * {
+  width: 165px;
+  position: absolute;
+}
+
+.hearingLoss-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearingLoss-list > * + * {
+  margin-left: -2vmin;
+}
+
+.hearingLoss-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5vmin;
+  width: 12vmin;
+  height: 12vmin;
+  background-color: #34c84a;
+  border-radius: 50%;
+  font-size: 2vmin;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hearingLoss-item:nth-of-type(2) {
+  width: 12.6vmin;
+  height: 12.6vmin;
+  background-color: #7dc446;
+}
+
+.hearingLoss-item:nth-of-type(3) {
+  width: 13.5vmin;
+  height: 13.5vmin;
+  background-color: #a5c144;
+}
+
+.hearingLoss-item:nth-of-type(4) {
+  width: 14.3vmin;
+  height: 14.3vmin;
+  background-color: #d5be42;
+}
+
+.hearingLoss-item:nth-of-type(5) {
+  width: 15.2vmin;
+  height: 15.2vmin;
+  background-color: #fdbc40;
+}
+
+.hearingLoss-item:nth-of-type(6) {
+  width: 16vmin;
+  height: 16vmin;
+  background-color: #f29b3f;
+}
+
+.hearingLoss-item:nth-of-type(7) {
+  width: 17vmin;
+  height: 17vmin;
+  background-color: #eb863e;
+}
+
+.hearingLoss-item:nth-of-type(8) {
+  width: 17.8vmin;
+  height: 17.8vmin;
+  background-color: #de603c;
+}
+
+.hearingLoss-item:nth-of-type(9) {
+  width: 18.7vmin;
+  height: 18.7vmin;
+  background-color: #d23c3b;
+}
+
+.hearingLoss-list .isActive.hearingLoss-item {
+  border: 6px solid #ffffff;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.17),
+    inset 0 0 10px rgba($color: #000000, $alpha: 0.17);
+  z-index: 2;
+}

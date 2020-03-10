@@ -1,0 +1,106 @@
+.TypesOfHearingWrap {
+  // width: 70vw;
+  // height: 25vw;
+  // max-height: 45vh;
+  // max-width: 80.33vh;
+  // display: flex;
+  // flex-direction: column;
+  min-height: 468px;
+}
+
+.earDisplay {
+  position: relative;
+}
+
+.earDisplay-hd {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.earDisplay-hd-item {
+  width: 28.333%;
+  padding-bottom: 5px;
+  margin: 0 1%;
+  border-bottom: 3px solid #cccccc;
+  white-space: nowrap;
+}
+
+.earDisplay-hd-item_small {
+  width: 15%;
+}
+
+.earDisplay-hd-item-text {
+  font-size: 1.8vmin;
+  font-weight: bold;
+}
+
+.earDisplay-bd {
+  position: relative;
+  display: flex;
+}
+
+.earDisplay-earGraphic {
+  width: 70vmin;
+  margin-left: 10px;
+}
+
+.earDisplay-connection {
+  width: 28vmin;
+  height: 23.5vmin;
+  position: relative;
+  top: 15px;
+  right: 25px;
+  max-width: 280px;
+  max-height: 235px;
+}
+
+.earDisplay-bd-cover {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(30, 155, 233, 0.71);
+  animation: earDisplay 1s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes earDisplay {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes earDisplayCircle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.earDisplay-bd-cover_inner {
+  right: 29%;
+  width: 26.2%;
+}
+
+.earDisplay-bd-cover_middle {
+  left: 29%;
+  width: 13.9%;
+}
+
+.earDisplay-bd-cover_outer {
+  width: 26.2%;
+  left: 8px;
+}
+
+.earDisplay-bd-cover_mixed {
+  width: 36%;
+  height: 75%;
+  left: 20%;
+  bottom: 12%;
+  border-radius: 50%;
+  animation: earDisplayCircle 1s ease-in-out forwards;
+}
